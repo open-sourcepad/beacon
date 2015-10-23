@@ -1,3 +1,3 @@
 json.data do
-  json.array! @objs, partial: 'api/v1/devices/obj', as: :obj
+  json.array! @objs, partial: 'obj', as: :obj
 end

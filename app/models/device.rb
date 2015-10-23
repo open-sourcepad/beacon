@@ -1,5 +1,5 @@
 class Device < ActiveRecord::Base
-  UNSAFE_STATES = %w(default fire flood accidents calamity crime)
+  UNSAFE_STATES = %w(default fire flood accident calamity crime)
 
   validates_presence_of :device_id, :latitude, :longitude
   validates_uniqueness_of :device_id

@@ -1,0 +1,24 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  pool: 50
+  timeout: 60000
+
+production:
+  <<: *defaults
+  database: beacon_prod_db
+  username: beacon_prod_user
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  encoding: unicode
+
+development:
+  <<: *defaults
+  database: beacon_dev
+  username: pogi
+
+test:
+  <<: *defaults
+  database: beacon_test

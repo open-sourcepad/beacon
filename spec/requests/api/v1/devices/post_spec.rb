@@ -36,7 +36,8 @@ describe 'POST /api/devices' do
   context 'not so happy path' do
 
     before do
-      post '/api/devices', {device: {state: 'not valid'}}
+      post '/api/devices', {device: attributes}
+      post '/api/devices', {device: attributes}
     end
 
     it 'returns 422 status' do

@@ -12,6 +12,10 @@ class Api::V1::AidsController < Api::ApiController
     end
   end
 
+  def show
+    @objs = Aid.where(recipient_id: params[:id]).active
+  end
+
 
   private
 

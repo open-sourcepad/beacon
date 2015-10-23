@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023114746) do
+ActiveRecord::Schema.define(version: 20151023140449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,13 +21,14 @@ ActiveRecord::Schema.define(version: 20151023114746) do
     t.string   "recipient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state",        default: "active"
   end
 
   create_table "devices", force: :cascade do |t|
-    t.string   "device_id",                   null: false
-    t.string   "state",      default: "okay"
-    t.float    "latitude",                    null: false
-    t.float    "longitude",                   null: false
+    t.string   "device_id",                      null: false
+    t.string   "state",      default: "default"
+    t.float    "latitude",                       null: false
+    t.float    "longitude",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

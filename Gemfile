@@ -27,3 +27,6 @@ end
 group :test do
   gem 'rspec-rails', '~> 3.3.2'
 end
+
+gem 'rails_12factor', group: :production
+ruby '2.2.3'

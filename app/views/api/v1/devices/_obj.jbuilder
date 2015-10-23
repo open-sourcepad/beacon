@@ -3,6 +3,8 @@ json.extract! obj, *%i(
   state
   latitude
   longitude
+  created_at
+  updated_at
 )
 
 json.helping obj.aids_given.pluck(:recipient_id)
